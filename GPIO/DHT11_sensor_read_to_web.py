@@ -21,7 +21,7 @@ def setup():
     return (sensor,pin)
 
 def webcall(temp_c,temp_f,humidity):
-	url = 'http://www.sowmiyan.com/IoT/dht11.php'
+	url = 'http://www.data2o.io/IoT/dht11.php'
 	payload = {'tme':str(datetime.datetime.now()),'temp_cel':temp_c,'temp_f':temp_f,'humidity':humidity}
 	#print( str(datetime.datetime.now())+','+str(temperature)+','+ str(temperature*1.8+32)+','+ str(humidity))
 	r = requests.get(url,params=payload)
